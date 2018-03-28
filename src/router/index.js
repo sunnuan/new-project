@@ -9,6 +9,7 @@ const home = r => require.ensure([], () => r(require('@/page/home')), 'home');
 const blog = r => require.ensure([], () => r(require('@/page/blog')), 'blog');
 const about = r => require.ensure([], () => r(require('@/page/about')), 'about');
 const contactMe = r => require.ensure([], () => (require('@/page/contactMe')), 'contactMe');
+const detail = r => require.ensure([],() => (require('@/page/detail')), 'detail')
 
 Vue.use(Router)
 
@@ -30,6 +31,10 @@ const router = new Router({
     {
       path: '/contactMe',
       component: contactMe
+    },
+    {
+      path: '/detail',
+      component: detail
     }
   ]
 })

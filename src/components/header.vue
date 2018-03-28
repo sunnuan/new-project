@@ -4,13 +4,13 @@
     <el-header class="n-p">
       <div class="header-bg">
         <div class="header-author inline pull-left">
-          <h2 class="p-md-l">
-            <router-link to="/">
-              SUNUAN
-            </router-link>
-          </h2>
+          <router-link to="/">
+            <h2 class="p-md-l gray">
+            SUNUAN
+            </h2>
+          </router-link>
         </div>
-        <el-menu class="el-menu-demo pull-right hidden-xs-only">
+        <el-menu  class="el-menu-demo pull-right hidden-xs-only" mode="horizontal" text-color="#c0ccda">
           <el-menu-item index="1" class="inline-b">
             <router-link to="/">
               Home
@@ -26,14 +26,10 @@
               About
             </router-link>
           </el-menu-item>
-          <el-submenu index="4" class="inline-b">
-            <template slot="title">Contact Me</template>
-            <el-menu-item index="4-1">
-              <a href="https://github.com/sunnuan">Github</a>
-            </el-menu-item>
-            <el-menu-item index="4-2">
-              <a href="https://www.zhihu.com/people/su-nuan-67-6/activities">知乎</a>
-            </el-menu-item>
+          <el-submenu index="4">
+            <template slot="title" >Contact Me</template>
+            <el-menu-item index="4-1"><a href="https://github.com/sunnuan">Github</a></el-menu-item>
+            <el-menu-item index="4-2"><a href="https://www.zhihu.com/people/su-nuan-67-6/activities">知乎</a></el-menu-item>
           </el-submenu>
         </el-menu>
         <div class="header-right">
@@ -61,7 +57,7 @@
     }
 </script>
 
-<style scoped>
+<style lang="less" scoped>
 
   a {
     color: #000000;
@@ -80,6 +76,7 @@
   .el-menu-demo {
     background-color: #FEF8EA;
     display: inline;
+    border-bottom: none;
   }
 
   .el-menu-demo li {

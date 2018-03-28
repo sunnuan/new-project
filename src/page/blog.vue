@@ -5,14 +5,7 @@
     </div>
     <div class="container">
      <div class="box">
-        <ul>
-          <li v-for="item in dataInfo" class="blog_list b_b m-md-t-b">
-            <h3>{{ item.title }}</h3>
-            <p>{{ item.descript }}</p>
-            <div class="type_font">{{ item.type }}</div>
-            <div>{{ item.date }}</div>
-          </li>
-        </ul>
+       <articleBlog v-bind:dataInfo = "dataInfo"></articleBlog>
      </div>
     </div>
   </div>
@@ -20,6 +13,7 @@
 
 <script>
   import headerF from '../components/header'
+  import articleBlog from '../components/allArticle'
   export default {
     name: "home",
     data () {
@@ -28,21 +22,25 @@
           backgroundImage: "url(" + require("../assets/blog.jpg") + ")",
         },
         dataInfo: [{
+          id: 1,
           date: '2016-05-02',
           title: '王小虎',
           descript: '上海市普陀区金沙江路 1518 弄',
           type: 'vue js'
         },{
+          id: 2,
           date: '2016-05-02',
           title: '王小虎',
           descript: '上海市普陀区金沙江路 1518 弄',
           type: 'vue js'
         },{
+          id: 3,
           date: '2016-05-02',
           title: '王小虎',
           descript: '上海市普陀区金沙江路 1518 弄',
           type: 'vue js'
         },{
+          id: 4,
           date: '2016-05-02',
           title: '王小虎',
           descript: '上海市普陀区金沙江路 1518 弄',
@@ -51,7 +49,8 @@
       }
     },
     components: {
-      headerF
+      headerF,
+      articleBlog
     }
   }
 </script>
