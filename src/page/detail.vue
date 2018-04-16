@@ -33,6 +33,7 @@
 </template>
 
 <script>
+  import gql from 'graphql-tag'
   import headerF from '../components/header'
     export default {
         name: "detail",

@@ -15,12 +15,26 @@
 </template>
 
 <script>
+  import { homeList } from '@/api/home'
+
     export default {
         name: "allArticle",
-        props: {
-          dataInfo: {
-            type: Array,
-            required: true
+        data () {
+          return {
+            titleInfo: []
+          }
+        },
+      created: function () {
+        this.getAllTitle()
+      },
+        methods: {
+          getAllTitle() {
+
+            homeList () .then(resResult => {
+
+              console.log(resResult)
+
+            })
           }
         }
     }

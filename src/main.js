@@ -8,10 +8,30 @@ import VueResource from 'vue-resource'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import 'element-ui/lib/theme-chalk/display.css'
-import { ApolloClient, createNetworkInterface } from 'apollo-client'
-import VueApollo from 'vue-apollo'
+import axios from 'axios'
 
-//graphql-js 构建客户端，可以构建多个适应不同接口
+Vue.config.debug = true;
+Vue.config.productionTip = false;
+
+Vue.use(VueRouter)
+Vue.use(VueResource)
+Vue.use(ElementUI)
+// Vue.use(VueApollo)
+Vue.use(axios)
+
+/* eslint-disable no-new */
+new Vue({
+  el: '#app',
+  router,
+  components: { App },
+  template: '<App/>'
+})
+
+
+// import { ApolloClient, createNetworkInterface } from 'apollo-client'
+// import VueApollo from 'vue-apollo'
+
+// graphql-js 构建客户端，可以构建多个适应不同接口
 // const networkInterfaceTask = createNetworkInterface({
 //   uri: '/api/tasks/graphql',
 //   transportBatching: true,
@@ -32,23 +52,5 @@ import VueApollo from 'vue-apollo'
 //   defaultClient: apolloClientTask
 // })
 
-//graphql-js
-
-
-Vue.config.debug = true;
-Vue.config.productionTip = false;
-
-Vue.use(VueRouter)
-Vue.use(VueResource)
-Vue.use(ElementUI)
-Vue.use(VueApollo)
-
-/* eslint-disable no-new */
-new Vue({
-  el: '#app',
-  router,
-  components: { App },
-  template: '<App/>'
-})
-
+// graphql-js
 
